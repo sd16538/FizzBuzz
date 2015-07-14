@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class FizzBuzzTester {
 
-	private FizzBuzz fizzbuzz = new FizzBuzz();
+	private final FizzBuzz fizzbuzz = new FizzBuzz();
 
 	@Test
 	public void shouldReturnNumberWhenNotDivisibleBy_3_Or_5() {
