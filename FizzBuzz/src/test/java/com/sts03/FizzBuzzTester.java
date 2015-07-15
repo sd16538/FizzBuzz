@@ -10,6 +10,24 @@ public class FizzBuzzTester {
 	private final FizzBuzz fizzbuzz = new FizzBuzz();
 
 	@Test
+	public void shouldReturnFizzBuzzWhenNegative_And_DivisibleBy_3_And_5() {
+		String result = fizzbuzz.process(-15);
+		assertThat(result, equalTo("fizzbuzz"));
+	}
+
+	@Test
+	public void shouldReturnNegativeNumberWhenNotDivisibleBy_3_Or_5() {
+		String result = fizzbuzz.process(-2);
+		assertThat(result, equalTo("-2"));
+	}
+
+	@Test
+	public void shouldReturnZeroWhenNotDivisibleBy_3_Or_5() {
+		String result = fizzbuzz.process(0);
+		assertThat(result, equalTo("0"));
+	}
+
+	@Test
 	public void shouldReturnNumberWhenNotDivisibleBy_3_Or_5() {
 		String result = fizzbuzz.process(4);
 		assertThat(result, equalTo("4"));

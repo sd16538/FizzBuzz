@@ -32,6 +32,8 @@ public class FizzBuzz {
 	}
 
 	protected String process(int number) {
+		if (number == 0)
+			return "0";
 		String result = EMPTY_STRING;
 		if (isDivisibleBy3(number)) {
 			result += FIZZ;
